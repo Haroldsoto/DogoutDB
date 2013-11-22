@@ -20,6 +20,7 @@ namespace Dogout_Reporting_Application
         private void frmMenu_Load(object sender, EventArgs e)
         {
            ucReportes.formToOpen = new frmReportesApp();
+           ucOpcionesMenu2.formToOpen = new GeneradorQR();
         }
 
         private void ucReportes_Load(object sender, EventArgs e)
@@ -30,6 +31,11 @@ namespace Dogout_Reporting_Application
         private void ucReportes_Click(object sender, EventArgs e)
         {
             ucReportes.formToOpen = new frmReportesApp();
+        }
+
+        private void ucOpcionesMenu2_Load(object sender, EventArgs e)
+        {
+            
         }
         
     

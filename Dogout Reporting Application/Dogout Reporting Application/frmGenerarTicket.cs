@@ -35,6 +35,11 @@ namespace Dogout_Reporting_Application
             
         }
 
+        private void dgvMatches_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         
     }
 }
