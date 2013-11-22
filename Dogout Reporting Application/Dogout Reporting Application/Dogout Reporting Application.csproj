@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD21C120-B680-4328-8073-3A1CC459E351}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dogout_Reporting_Application</RootNamespace>
+    <AssemblyName>Dogout Reporting Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0 Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comun\ucOpcionesMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comun\ucOpcionesMenu.Designer.cs">
+      <DependentUpon>ucOpcionesMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuboBusinessIntelligenceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuboBusinessIntelligenceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGananciasPorEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGananciasPorEquipo.Designer.cs">
+      <DependentUpon>frmGananciasPorEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerarTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarTicket.Designer.cs">
+      <DependentUpon>frmGenerarTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagosPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagosPorFecha.Designer.cs">
+      <DependentUpon>frmPagosPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteGananciasPorEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteGananciasPorEquipo.Designer.cs">
+      <DependentUpon>frmReporteGananciasPorEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteMatchesPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteMatchesPorFecha.Designer.cs">
+      <DependentUpon>frmReporteMatchesPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMatchesPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMatchesPorFecha.Designer.cs">
+      <DependentUpon>frmMatchesPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePagosPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportePagosPorFecha.Designer.cs">
+      <DependentUpon>frmReportePagosPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportesApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportesApp.Designer.cs">
+      <DependentUpon>frmReportesApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteTicketsPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteTicketsPorFecha.Designer.cs">
+      <DependentUpon>frmReporteTicketsPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTicketsPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTicketsPorFecha.Designer.cs">
+      <DependentUpon>frmTicketsPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jugada.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Comun\ucOpcionesMEnu.resx">
+      <DependentUpon>ucOpcionesMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGananciasPorEquipo.resx">
+      <DependentUpon>frmGananciasPorEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarTicket.resx">
+      <DependentUpon>frmGenerarTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagosPorFecha.resx">
+      <DependentUpon>frmPagosPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteGananciasPorEquipo.resx">
+      <DependentUpon>frmReporteGananciasPorEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteMatchesPorFecha.resx">
+      <DependentUpon>frmReporteMatchesPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchesPorFecha.resx">
+      <DependentUpon>frmMatchesPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePagosPorFecha.resx">
+      <DependentUpon>frmReportePagosPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportesApp.resx">
+      <DependentUpon>frmReportesApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteTicketsPorFecha.resx">
+      <DependentUpon>frmReporteTicketsPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTicketsPorFecha.resx">
+      <DependentUpon>frmTicketsPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <None Include="CuboBusinessIntelligenceDataSet.xsc">
+      <DependentUpon>CuboBusinessIntelligenceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CuboBusinessIntelligenceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CuboBusinessIntelligenceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuboBusinessIntelligenceDataSet.xss">
+      <DependentUpon>CuboBusinessIntelligenceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogout_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Comun\reports.png" />
+    <None Include="Comun\opControlBG.png" />
+    <Content Include="Resources\opControlBG.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
