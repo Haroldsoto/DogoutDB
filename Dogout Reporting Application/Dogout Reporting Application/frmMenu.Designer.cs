@@ -28,9 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ucOpcionesMenu2 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucReportes = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu1 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.SuspendLayout();
+            // 
+            // ucOpcionesMenu2
+            // 
+            this.ucOpcionesMenu2.BackColor = System.Drawing.Color.Transparent;
+            this.ucOpcionesMenu2.controlDescription = null;
+            this.ucOpcionesMenu2.controlImage = global::Dogout_Reporting_Application.Properties.Resources._1385118673_qr_code;
+            this.ucOpcionesMenu2.controlTitle = "Generador QR";
+            this.ucOpcionesMenu2.formToOpen = null;
+            this.ucOpcionesMenu2.Location = new System.Drawing.Point(12, 151);
+            this.ucOpcionesMenu2.Name = "ucOpcionesMenu2";
+            this.ucOpcionesMenu2.Size = new System.Drawing.Size(269, 91);
+            this.ucOpcionesMenu2.TabIndex = 2;
+            this.ucOpcionesMenu2.Load += new System.EventHandler(this.ucOpcionesMenu2_Load);
             // 
             // ucReportes
             // 
@@ -63,6 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 536);
+            this.Controls.Add(this.ucOpcionesMenu2);
             this.Controls.Add(this.ucReportes);
             this.Controls.Add(this.ucOpcionesMenu1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -78,6 +93,7 @@
 
         private Comun.ucOpcionesMenu ucOpcionesMenu1;
         private Comun.ucOpcionesMenu ucReportes;
+        private Comun.ucOpcionesMenu ucOpcionesMenu2;
 
 
 

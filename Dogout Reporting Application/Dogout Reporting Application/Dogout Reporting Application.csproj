@@ -40,6 +40,9 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0 Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\..\..\..\Downloads\ZXing.Net.0.12.0.0\net4.0\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comun\ucOpcionesMenu.cs">
@@ -52,6 +55,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CuboBusinessIntelligenceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GeneradorQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneradorQR.Designer.cs">
+      <DependentUpon>GeneradorQR.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGananciasPorEquipo.cs">
       <SubType>Form</SubType>
@@ -158,6 +167,9 @@
     <EmbeddedResource Include="frmTicketsPorFecha.resx">
       <DependentUpon>frmTicketsPorFecha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneradorQR.resx">
+      <DependentUpon>GeneradorQR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -202,6 +214,7 @@
   <ItemGroup>
     <None Include="Comun\reports.png" />
     <None Include="Comun\opControlBG.png" />
+    <None Include="Resources\1385118673_qr-code.png" />
     <Content Include="Resources\opControlBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

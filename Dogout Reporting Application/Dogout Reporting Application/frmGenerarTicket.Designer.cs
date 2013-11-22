@@ -49,6 +49,7 @@
             this.dgvMatches.Name = "dgvMatches";
             this.dgvMatches.Size = new System.Drawing.Size(642, 286);
             this.dgvMatches.TabIndex = 1;
+            this.dgvMatches.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatches_CellContentClick);
             // 
             // label1
             // 
