@@ -45,7 +45,7 @@ namespace Dogout_Reporting_Application
         {
 
             selectedRow = dgvMatches.Rows[e.RowIndex];
-            label2.Text = selectedRow.Cells["Código"].Value.ToString();
+            //F;label2.Text = selectedRow.Cells["Código"].Value.ToString();
 
             frmCreateTicket frmTicket = new frmCreateTicket(selectedRow.Cells["Código"].Value.ToString(), selectedRow.Cells["Enfrentamiento"].Value.ToString());
             frmTicket.ShowDialog();

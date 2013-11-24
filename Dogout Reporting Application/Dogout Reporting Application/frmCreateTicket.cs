@@ -64,8 +64,8 @@ namespace Dogout_Reporting_Application
             if (cbEquipo.SelectedItem.ToString() == Home)
             {
                
-                label1.Text = (from DataRow dr in dt1.Rows
-                                      select (int)dr["IdHome"]).FirstOrDefault().ToString();
+                //label1.Text = (from DataRow dr in dt1.Rows
+                                      //select (int)dr["IdHome"]).FirstOrDefault().ToString();
             TeamId = (from DataRow dr in dt1.Rows
                                       select (int)dr["IdHome"]).FirstOrDefault();
             }
@@ -73,8 +73,8 @@ namespace Dogout_Reporting_Application
             else if (cbEquipo.SelectedItem.ToString() == Away)
             {
                
-                label1.Text = (from DataRow dr in dt1.Rows
-                                      select (int)dr["IdAway"]).FirstOrDefault().ToString();
+               // label1.Text = (from DataRow dr in dt1.Rows
+                 //                     select (int)dr["IdAway"]).FirstOrDefault().ToString();
             TeamId = (from DataRow dr in dt1.Rows
                                       select (int)dr["IdAway"]).FirstOrDefault();
             }
@@ -88,6 +88,11 @@ namespace Dogout_Reporting_Application
         {
             Jugada objeto = (Jugada)cbJugadas.SelectedItem;
             IdJugada = objeto.Id;
+        }
+
+        private void frmCreateTicket_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
