@@ -43,8 +43,7 @@ namespace Dogout_Reporting_Application
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmGenerarTicket frmGenerarTicket = new frmGenerarTicket();
-            frmGenerarTicket.ShowDialog();
+            
         }
     }
 }

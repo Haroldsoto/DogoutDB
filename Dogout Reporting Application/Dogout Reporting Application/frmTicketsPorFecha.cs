@@ -14,7 +14,7 @@ namespace Dogout_Reporting_Application
     public partial class frmTicketsPorFecha : Form
     {
         public List<Jugada> Jugadas { get; set; }
-        public Jugada JugadaSelecc = new Jugada();
+       // public Jugada JugadaSelecc = new Jugada();
         public int IdJugada;
        
         public frmTicketsPorFecha()

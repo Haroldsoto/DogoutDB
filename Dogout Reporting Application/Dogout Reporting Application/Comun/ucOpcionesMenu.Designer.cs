@@ -36,7 +36,7 @@
             // 
             // pbControlImage
             // 
-            this.pbControlImage.Location = new System.Drawing.Point(0, 0);
+            this.pbControlImage.Location = new System.Drawing.Point(3, 0);
             this.pbControlImage.Name = "pbControlImage";
             this.pbControlImage.Size = new System.Drawing.Size(73, 86);
             this.pbControlImage.TabIndex = 0;
@@ -51,14 +51,16 @@
             this.lblTitle.Size = new System.Drawing.Size(179, 31);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "{Control Title}";
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // lblDescription
             // 
-            this.lblDescription.Location = new System.Drawing.Point(79, 31);
+            this.lblDescription.Location = new System.Drawing.Point(82, 31);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(217, 55);
             this.lblDescription.TabIndex = 2;
             this.lblDescription.Text = "(Descripcion)";
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // ucOpcionesMenu
             // 
@@ -69,7 +71,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbControlImage);
             this.Name = "ucOpcionesMenu";
-            this.Size = new System.Drawing.Size(269, 91);
+            this.Size = new System.Drawing.Size(301, 92);
             this.Load += new System.EventHandler(this.ucOpcionesMenu_Load_1);
             this.Click += new System.EventHandler(this.ucOpcionesMenu_Click);
             this.MouseLeave += new System.EventHandler(this.ucOpcionesMenu_MouseLeave);

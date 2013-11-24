@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace Dogout_Reporting_Application
 {
-    public class Jugada
+    public class Equipo
     {
-        public Jugada(int _id, string _descripcion)
+        public Equipo(int _id, string _descripcion)
     {
-     
         Id = _id;
         Descripcion = _descripcion;
-        
+    }
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
     }
 
-    
-    public int Id { get; set; }
-    public string Descripcion { get; set; }
-   
-    }
 }

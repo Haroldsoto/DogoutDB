@@ -84,6 +84,22 @@ namespace Dogout_Reporting_Application.Comun
             this.BackgroundImage = Dogout_Reporting_Application.Properties.Resources.opControlBG;
         }
 
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            if (_formToOpen != null)
+                _formToOpen.ShowDialog();
+            else
+                MessageBox.Show("ACCESO DENEGADO.", "DOGOUT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+            if (_formToOpen != null)
+                _formToOpen.ShowDialog();
+            else
+                MessageBox.Show("ACCESO DENEGADO.", "DOGOUT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
 
     }
 }

@@ -14,6 +14,7 @@ namespace Dogout_Reporting_Application
     public partial class frmGenerarTicket : Form
     {
         public string Fecha;
+        public DataGridViewRow selectedRow { get; set; }
         public frmGenerarTicket()
         {
             InitializeComponent();
@@ -38,6 +39,16 @@ namespace Dogout_Reporting_Application
         private void dgvMatches_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvMatches_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            selectedRow = dgvMatches.Rows[e.RowIndex];
+            label2.Text = selectedRow.Cells["Código"].Value.ToString();
+
+            frmCreateTicket frmTicket = new frmCreateTicket(selectedRow.Cells["Código"].Value.ToString(), selectedRow.Cells["Enfrentamiento"].Value.ToString());
+            frmTicket.ShowDialog();
         }
 
         

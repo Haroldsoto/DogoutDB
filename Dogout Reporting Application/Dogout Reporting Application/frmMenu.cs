@@ -21,6 +21,7 @@ namespace Dogout_Reporting_Application
         {
            ucReportes.formToOpen = new frmReportesApp();
            ucOpcionesMenu2.formToOpen = new GeneradorQR();
+            ucTickets.formToOpen = new frmGenerarTicket();
         }
 
         private void ucReportes_Load(object sender, EventArgs e)
