@@ -39,8 +39,6 @@ namespace Dogout_Reporting_Application
             Jugadas = dt.Select(item => new Jugada(item.ID, item.Descripcion)).ToList();
             cbJugadas.DataSource = Jugadas;
             cbEquipo.DataSource = Equipos;
-
-
         }
 
         private void lblMonto_Click(object sender, EventArgs e)
@@ -57,6 +55,8 @@ namespace Dogout_Reporting_Application
         {
             CuboBusinessIntelligenceDataSetTableAdapters.TeamsMatchTableAdapter Adapter1 = new TeamsMatchTableAdapter();
             CuboBusinessIntelligenceDataSet.TeamsMatchDataTable dt1 = Adapter1.GetData(int.Parse(Match));
+            CuboBusinessIntelligenceDataSetTableAdapters.GetLastIdTableAdapter AdapterId = new GetLastIdTableAdapter();
+            CuboBusinessIntelligenceDataSet.GetLastIdDataTable dt2 = AdapterId.GetData();
             int TeamId = 0;
             int LineId= 1;
             Jugada objeto = (Jugada)cbJugadas.SelectedItem;
@@ -78,8 +78,9 @@ namespace Dogout_Reporting_Application
             TeamId = (from DataRow dr in dt1.Rows
                                       select (int)dr["IdAway"]).FirstOrDefault();
             }
-
-            GeneradorQR.GenerateQR(53);
+            int LastId = (from DataRow dr in dt2.Rows
+                      select (int)dr["Codigo"]).FirstOrDefault() + 1;
+            GeneradorQR.GenerateQR(LastId.ToString());
             CuboBusinessIntelligenceDataSetTableAdapters.SetTicketTableAdapter Adapter = new SetTicketTableAdapter();
             CuboBusinessIntelligenceDataSet.SetTicketDataTable dt = Adapter.GetData(IdJugada,decimal.Parse(tbMonto.Text),int.Parse(Match),TeamId,LineId,DateTime.Now);
             frmTicketImpreso frmTicketImpreso = new frmTicketImpreso();

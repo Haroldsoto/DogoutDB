@@ -64,11 +64,23 @@
     <Compile Include="frmCreateTicket.Designer.cs">
       <DependentUpon>frmCreateTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTicketImpreso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTicketImpreso.Designer.cs">
       <DependentUpon>frmTicketImpreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneradorQR.cs">
       <SubType>Form</SubType>
@@ -143,6 +155,7 @@
       <DependentUpon>frmTicketsPorFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Jugada.cs" />
+    <Compile Include="Payment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Comun\ucOpcionesMEnu.resx">
@@ -159,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagosPorFecha.resx">
       <DependentUpon>frmPagosPorFecha.cs</DependentUpon>
@@ -187,20 +203,19 @@
     <EmbeddedResource Include="frmTicketsPorFecha.resx">
       <DependentUpon>frmTicketsPorFecha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneradorQR.resx">
       <DependentUpon>GeneradorQR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
@@ -220,6 +235,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -233,10 +253,12 @@
     <None Include="Resources\dogout_logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sales.png" />
     <None Include="Comun\reports.png" />
     <None Include="Comun\opControlBG.png" />
     <None Include="Resources\1385118673_qr-code.png" />
     <None Include="Resources\1385288252_invoice.png" />
+    <None Include="Resources\1385413842_23.png" />
     <Content Include="Resources\opControlBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

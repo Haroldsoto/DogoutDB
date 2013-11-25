@@ -19,8 +19,10 @@ namespace Dogout_Reporting_Application
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-           ucReportes.formToOpen = new frmReportesApp();
-          ucTickets.formToOpen = new frmGenerarTicket();
+            ucOpcionesMenu2.formToOpen = new frmReportesApp();
+           ucOpcionesMenu1.formToOpen = new frmGenerarTicket();
+           ucOpcionesMenu3.formToOpen = new frmPagos();
+             ucOpcionesMenu4.formToOpen = new frmVentas();
         }
 
         private void ucReportes_Load(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace Dogout_Reporting_Application
 
         private void ucReportes_Click(object sender, EventArgs e)
         {
-            ucReportes.formToOpen = new frmReportesApp();
+            
         }
 
        

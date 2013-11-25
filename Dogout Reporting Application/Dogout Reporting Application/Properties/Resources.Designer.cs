@@ -83,6 +83,16 @@ namespace Dogout_Reporting_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1385413842_23 {
+            get {
+                object obj = ResourceManager.GetObject("1385413842_23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dogout_logo {
             get {
                 object obj = ResourceManager.GetObject("dogout_logo", resourceCulture);
@@ -106,6 +116,16 @@ namespace Dogout_Reporting_Application.Properties {
         internal static System.Drawing.Bitmap reports {
             get {
                 object obj = ResourceManager.GetObject("reports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sales {
+            get {
+                object obj = ResourceManager.GetObject("sales", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,6 +31,7 @@
             this.pbControlImage = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pbControlImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,5 +88,6 @@
         private System.Windows.Forms.PictureBox pbControlImage;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDescription;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
