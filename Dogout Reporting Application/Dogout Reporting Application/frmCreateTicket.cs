@@ -79,7 +79,7 @@ namespace Dogout_Reporting_Application
                                       select (int)dr["IdAway"]).FirstOrDefault();
             }
 
-           
+            GeneradorQR.GenerateQR(53);
             CuboBusinessIntelligenceDataSetTableAdapters.SetTicketTableAdapter Adapter = new SetTicketTableAdapter();
             CuboBusinessIntelligenceDataSet.SetTicketDataTable dt = Adapter.GetData(IdJugada,decimal.Parse(tbMonto.Text),int.Parse(Match),TeamId,LineId,DateTime.Now);
             frmTicketImpreso frmTicketImpreso = new frmTicketImpreso();

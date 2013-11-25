@@ -1,4 +1,6 @@
-﻿namespace Dogout_Reporting_Application
+﻿using System.Drawing;
+
+namespace Dogout_Reporting_Application
 {
     partial class frmTicketImpreso
     {
@@ -31,16 +33,31 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CuboBusinessIntelligenceDataSet = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSet();
             this.LastTicketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.LastTicketTableAdapter = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSetTableAdapters.LastTicketTableAdapter();
+            this.CuboBusinessIntelligenceDataSet = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSet();
             this.DatosBancaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.LastTicketTableAdapter = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSetTableAdapters.LastTicketTableAdapter();
             this.DatosBancaTableAdapter = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSetTableAdapters.DatosBancaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastTicketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatosBancaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // LastTicketBindingSource
+            // 
+            this.LastTicketBindingSource.DataMember = "LastTicket";
+            this.LastTicketBindingSource.DataSource = this.CuboBusinessIntelligenceDataSet;
+            // 
+            // CuboBusinessIntelligenceDataSet
+            // 
+            this.CuboBusinessIntelligenceDataSet.DataSetName = "CuboBusinessIntelligenceDataSet";
+            this.CuboBusinessIntelligenceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DatosBancaBindingSource
+            // 
+            this.DatosBancaBindingSource.DataMember = "DatosBanca";
+            this.DatosBancaBindingSource.DataSource = this.CuboBusinessIntelligenceDataSet;
             // 
             // reportViewer1
             // 
@@ -56,24 +73,9 @@
             this.reportViewer1.Size = new System.Drawing.Size(406, 574);
             this.reportViewer1.TabIndex = 0;
             // 
-            // CuboBusinessIntelligenceDataSet
-            // 
-            this.CuboBusinessIntelligenceDataSet.DataSetName = "CuboBusinessIntelligenceDataSet";
-            this.CuboBusinessIntelligenceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // LastTicketBindingSource
-            // 
-            this.LastTicketBindingSource.DataMember = "LastTicket";
-            this.LastTicketBindingSource.DataSource = this.CuboBusinessIntelligenceDataSet;
-            // 
             // LastTicketTableAdapter
             // 
             this.LastTicketTableAdapter.ClearBeforeFill = true;
-            // 
-            // DatosBancaBindingSource
-            // 
-            this.DatosBancaBindingSource.DataMember = "DatosBanca";
-            this.DatosBancaBindingSource.DataSource = this.CuboBusinessIntelligenceDataSet;
             // 
             // DatosBancaTableAdapter
             // 
@@ -90,8 +92,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTicketImpreso";
             this.Load += new System.EventHandler(this.frmTicketImpreso_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastTicketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatosBancaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
