@@ -20,13 +20,17 @@ namespace Dogout_Reporting_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
+            pictureBox1.Image = GeneradorQR.GenerateQR(textBox1.Text);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+        public static Bitmap GenerateQR(string text)
+        {
             IBarcodeWriter writer = new BarcodeWriter { Format = BarcodeFormat.QR_CODE };
             Bitmap barcodeBitmap;
-            var result = writer.Write(textBox1.Text);
+            var result = writer.Write("http://dogout.azurewebsites.net/Ticket/Details/" + text);
             barcodeBitmap = new Bitmap(result, new Size(256, 256));
-            pictureBox1.Image = barcodeBitmap;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             barcodeBitmap.Save("qr.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+            return barcodeBitmap;
         }
     }
 }
