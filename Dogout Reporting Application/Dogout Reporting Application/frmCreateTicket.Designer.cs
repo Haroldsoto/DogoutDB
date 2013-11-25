@@ -40,7 +40,7 @@
             // 
             // tbMonto
             // 
-            this.tbMonto.Location = new System.Drawing.Point(145, 66);
+            this.tbMonto.Location = new System.Drawing.Point(191, 68);
             this.tbMonto.Name = "tbMonto";
             this.tbMonto.Size = new System.Drawing.Size(100, 20);
             this.tbMonto.TabIndex = 0;
@@ -48,7 +48,7 @@
             // lblMonto
             // 
             this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(142, 49);
+            this.lblMonto.Location = new System.Drawing.Point(188, 51);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(85, 13);
             this.lblMonto.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             this.cbJugadas.DisplayMember = "Descripcion";
             this.cbJugadas.FormattingEnabled = true;
-            this.cbJugadas.Location = new System.Drawing.Point(31, 65);
+            this.cbJugadas.Location = new System.Drawing.Point(77, 67);
             this.cbJugadas.Name = "cbJugadas";
             this.cbJugadas.Size = new System.Drawing.Size(74, 21);
             this.cbJugadas.TabIndex = 2;
@@ -68,7 +68,7 @@
             // lblJugada
             // 
             this.lblJugada.AutoSize = true;
-            this.lblJugada.Location = new System.Drawing.Point(28, 49);
+            this.lblJugada.Location = new System.Drawing.Point(74, 51);
             this.lblJugada.Name = "lblJugada";
             this.lblJugada.Size = new System.Drawing.Size(42, 13);
             this.lblJugada.TabIndex = 3;
@@ -77,7 +77,7 @@
             // lblEquipo
             // 
             this.lblEquipo.AutoSize = true;
-            this.lblEquipo.Location = new System.Drawing.Point(28, 117);
+            this.lblEquipo.Location = new System.Drawing.Point(74, 119);
             this.lblEquipo.Name = "lblEquipo";
             this.lblEquipo.Size = new System.Drawing.Size(40, 13);
             this.lblEquipo.TabIndex = 5;
@@ -86,7 +86,7 @@
             // cbEquipo
             // 
             this.cbEquipo.FormattingEnabled = true;
-            this.cbEquipo.Location = new System.Drawing.Point(31, 133);
+            this.cbEquipo.Location = new System.Drawing.Point(77, 135);
             this.cbEquipo.Name = "cbEquipo";
             this.cbEquipo.Size = new System.Drawing.Size(95, 21);
             this.cbEquipo.TabIndex = 4;
@@ -100,10 +100,11 @@
             this.lblEnfrentamiento.Name = "lblEnfrentamiento";
             this.lblEnfrentamiento.Size = new System.Drawing.Size(0, 18);
             this.lblEnfrentamiento.TabIndex = 6;
+            this.lblEnfrentamiento.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCrearTicket
             // 
-            this.btnCrearTicket.Location = new System.Drawing.Point(170, 131);
+            this.btnCrearTicket.Location = new System.Drawing.Point(216, 133);
             this.btnCrearTicket.Name = "btnCrearTicket";
             this.btnCrearTicket.Size = new System.Drawing.Size(75, 23);
             this.btnCrearTicket.TabIndex = 7;
@@ -115,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 161);
+            this.ClientSize = new System.Drawing.Size(375, 161);
             this.Controls.Add(this.btnCrearTicket);
             this.Controls.Add(this.lblEnfrentamiento);
             this.Controls.Add(this.lblEquipo);

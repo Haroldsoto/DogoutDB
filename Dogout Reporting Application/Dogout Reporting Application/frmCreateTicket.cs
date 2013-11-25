@@ -82,6 +82,8 @@ namespace Dogout_Reporting_Application
             
             CuboBusinessIntelligenceDataSetTableAdapters.SetTicketTableAdapter Adapter = new SetTicketTableAdapter();
             CuboBusinessIntelligenceDataSet.SetTicketDataTable dt = Adapter.GetData(IdJugada,decimal.Parse(tbMonto.Text),int.Parse(Match),TeamId,LineId,DateTime.Now);
+            frmTicketImpreso frmTicketImpreso = new frmTicketImpreso();
+            frmTicketImpreso.ShowDialog();
         }
 
         private void cbJugadas_SelectedValueChanged(object sender, EventArgs e)
