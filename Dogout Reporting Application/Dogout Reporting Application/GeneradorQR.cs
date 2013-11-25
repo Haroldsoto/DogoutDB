@@ -26,6 +26,7 @@ namespace Dogout_Reporting_Application
             barcodeBitmap = new Bitmap(result, new Size(256, 256));
             pictureBox1.Image = barcodeBitmap;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            barcodeBitmap.Save("qr.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
         }
     }
 }
