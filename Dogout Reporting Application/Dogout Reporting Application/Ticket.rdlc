@@ -451,6 +451,21 @@
           </Border>
         </Style>
       </Image>
+      <Image Name="QR">
+        <Source>Embedded</Source>
+        <Value>qr.bmp</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>3.32167in</Top>
+        <Left>2.97222in</Left>
+        <Height>1.10541in</Height>
+        <Width>1.16667in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
     </ReportItems>
     <Height>4.58333in</Height>
     <Style>

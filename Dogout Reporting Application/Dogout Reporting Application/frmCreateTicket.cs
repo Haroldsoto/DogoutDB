@@ -78,8 +78,8 @@ namespace Dogout_Reporting_Application
             TeamId = (from DataRow dr in dt1.Rows
                                       select (int)dr["IdAway"]).FirstOrDefault();
             }
-            
-            
+
+           
             CuboBusinessIntelligenceDataSetTableAdapters.SetTicketTableAdapter Adapter = new SetTicketTableAdapter();
             CuboBusinessIntelligenceDataSet.SetTicketDataTable dt = Adapter.GetData(IdJugada,decimal.Parse(tbMonto.Text),int.Parse(Match),TeamId,LineId,DateTime.Now);
             frmTicketImpreso frmTicketImpreso = new frmTicketImpreso();
