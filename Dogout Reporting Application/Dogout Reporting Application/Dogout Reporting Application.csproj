@@ -82,6 +82,12 @@
     <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ganador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganador.Designer.cs">
+      <DependentUpon>Ganador.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneradorQR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganador.resx">
+      <DependentUpon>Ganador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneradorQR.resx">
       <DependentUpon>GeneradorQR.cs</DependentUpon>

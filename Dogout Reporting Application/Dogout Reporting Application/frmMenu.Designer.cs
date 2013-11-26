@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opReportes));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ucOpcionesMenu4 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu3 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu2 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu1 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.opTickets = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucReportes = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
+            this.ucOpcionesMenu5 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -132,12 +133,26 @@
             this.ucReportes.Size = new System.Drawing.Size(301, 92);
             this.ucReportes.TabIndex = 8;
             // 
+            // ucOpcionesMenu5
+            // 
+            this.ucOpcionesMenu5.BackColor = System.Drawing.Color.Transparent;
+            this.ucOpcionesMenu5.controlDescription = null;
+            this.ucOpcionesMenu5.controlImage = null;
+            this.ucOpcionesMenu5.controlTitle = null;
+            this.ucOpcionesMenu5.formToOpen = null;
+            this.ucOpcionesMenu5.Location = new System.Drawing.Point(12, 395);
+            this.ucOpcionesMenu5.Name = "ucOpcionesMenu5";
+            this.ucOpcionesMenu5.Size = new System.Drawing.Size(258, 78);
+            this.ucOpcionesMenu5.TabIndex = 11;
+            this.ucOpcionesMenu5.Load += new System.EventHandler(this.ucOpcionesMenu5_Load);
+            // 
             // opReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(631, 485);
+            this.Controls.Add(this.ucOpcionesMenu5);
             this.Controls.Add(this.ucOpcionesMenu4);
             this.Controls.Add(this.ucOpcionesMenu3);
             this.Controls.Add(this.ucOpcionesMenu2);
@@ -165,6 +180,7 @@
         private Comun.ucOpcionesMenu ucOpcionesMenu2;
         private Comun.ucOpcionesMenu ucOpcionesMenu3;
         private Comun.ucOpcionesMenu ucOpcionesMenu4;
+        private Comun.ucOpcionesMenu ucOpcionesMenu5;
 
 
 
