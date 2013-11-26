@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opReportes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ucOpcionesMenu5 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu4 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu3 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu2 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu1 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.opTickets = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucReportes = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
-            this.ucOpcionesMenu5 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +63,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // ucOpcionesMenu5
+            // 
+            this.ucOpcionesMenu5.BackColor = System.Drawing.Color.Transparent;
+            this.ucOpcionesMenu5.controlDescription = null;
+            this.ucOpcionesMenu5.controlImage = null;
+            this.ucOpcionesMenu5.controlTitle = null;
+            this.ucOpcionesMenu5.formToOpen = null;
+            this.ucOpcionesMenu5.Location = new System.Drawing.Point(12, 395);
+            this.ucOpcionesMenu5.Name = "ucOpcionesMenu5";
+            this.ucOpcionesMenu5.Size = new System.Drawing.Size(258, 78);
+            this.ucOpcionesMenu5.TabIndex = 11;
+            this.ucOpcionesMenu5.Load += new System.EventHandler(this.ucOpcionesMenu5_Load);
+            // 
             // ucOpcionesMenu4
             // 
             this.ucOpcionesMenu4.BackColor = System.Drawing.Color.Transparent;
@@ -72,6 +87,7 @@
             this.ucOpcionesMenu4.Name = "ucOpcionesMenu4";
             this.ucOpcionesMenu4.Size = new System.Drawing.Size(301, 92);
             this.ucOpcionesMenu4.TabIndex = 10;
+            this.ucOpcionesMenu4.Load += new System.EventHandler(this.ucOpcionesMenu4_Load);
             // 
             // ucOpcionesMenu3
             // 
@@ -133,18 +149,11 @@
             this.ucReportes.Size = new System.Drawing.Size(301, 92);
             this.ucReportes.TabIndex = 8;
             // 
-            // ucOpcionesMenu5
+            // notifyIcon
             // 
-            this.ucOpcionesMenu5.BackColor = System.Drawing.Color.Transparent;
-            this.ucOpcionesMenu5.controlDescription = null;
-            this.ucOpcionesMenu5.controlImage = null;
-            this.ucOpcionesMenu5.controlTitle = null;
-            this.ucOpcionesMenu5.formToOpen = null;
-            this.ucOpcionesMenu5.Location = new System.Drawing.Point(12, 395);
-            this.ucOpcionesMenu5.Name = "ucOpcionesMenu5";
-            this.ucOpcionesMenu5.Size = new System.Drawing.Size(258, 78);
-            this.ucOpcionesMenu5.TabIndex = 11;
-            this.ucOpcionesMenu5.Load += new System.EventHandler(this.ucOpcionesMenu5_Load);
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
             // opReportes
             // 
@@ -181,6 +190,7 @@
         private Comun.ucOpcionesMenu ucOpcionesMenu3;
         private Comun.ucOpcionesMenu ucOpcionesMenu4;
         private Comun.ucOpcionesMenu ucOpcionesMenu5;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
 
 
 

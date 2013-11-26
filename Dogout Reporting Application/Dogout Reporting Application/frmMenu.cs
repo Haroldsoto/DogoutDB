@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
+using System.Threading.Tasks;
 
 namespace Dogout_Reporting_Application
 {
     public partial class opReportes : Form
     {
+        public static System.Timers.Timer aTimer;
         public opReportes()
         {
             InitializeComponent();
@@ -24,7 +27,22 @@ namespace Dogout_Reporting_Application
              ucOpcionesMenu3.formToOpen = new frmPagos();
              ucOpcionesMenu4.formToOpen = new frmVentas();
              ucOpcionesMenu5.formToOpen = new Ganador();
+             //    Create a timer with a ten second interval.
+             aTimer = new System.Timers.Timer(10000);
+
+             // Hook up the Elapsed event for the timer.
+             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+             aTimer.Interval = rnd(10000,60000);
+             aTimer.Enabled = true;
+             
+             
         }
+
+private static int rnd(int desde, int hasta)
+{
+             Random rl = new Random();
+             return rl.Next(desde, (hasta + 1));
+}
 
         private void ucReportes_Load(object sender, EventArgs e)
         {
@@ -41,11 +59,32 @@ namespace Dogout_Reporting_Application
 
         }
 
+        private void ucOpcionesMenu4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+                
+        public void NotificationDesktop(string Mensaje)
+        {
+            System.Media.SystemSounds.Exclamation.Play();
+            notifyIcon.Visible = true;
+            notifyIcon.Icon = SystemIcons.Application;
+            notifyIcon.BalloonTipText = Mensaje;
+            notifyIcon.ShowBalloonTip(10000);
+        }
        
-        
-    
+       
 
+       private void OnTimedEvent(object source, ElapsedEventArgs e)
+       {
 
-        
+           NotificationDesktop("test");
+       }
+
     }
 }
