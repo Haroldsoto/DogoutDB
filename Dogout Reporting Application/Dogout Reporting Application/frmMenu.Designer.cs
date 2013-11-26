@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opReportes));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ucOpcionesMenu5 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu4 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucOpcionesMenu3 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
@@ -40,7 +41,6 @@
             this.ucOpcionesMenu1 = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.opTickets = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
             this.ucReportes = new Dogout_Reporting_Application.Comun.ucOpcionesMenu();
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,12 @@
             this.panel1.Size = new System.Drawing.Size(608, 178);
             this.panel1.TabIndex = 6;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Dogout_Reporting_Application.Properties.Resources.dogout_logo;
@@ -66,11 +72,11 @@
             // ucOpcionesMenu5
             // 
             this.ucOpcionesMenu5.BackColor = System.Drawing.Color.Transparent;
-            this.ucOpcionesMenu5.controlDescription = null;
-            this.ucOpcionesMenu5.controlImage = null;
-            this.ucOpcionesMenu5.controlTitle = null;
+            this.ucOpcionesMenu5.controlDescription = "Módulo que permite agregar Tickets ganadores.";
+            this.ucOpcionesMenu5.controlImage = global::Dogout_Reporting_Application.Properties.Resources._1385500589_Trophy_Gold;
+            this.ucOpcionesMenu5.controlTitle = "Ganadores";
             this.ucOpcionesMenu5.formToOpen = null;
-            this.ucOpcionesMenu5.Location = new System.Drawing.Point(12, 395);
+            this.ucOpcionesMenu5.Location = new System.Drawing.Point(12, 404);
             this.ucOpcionesMenu5.Name = "ucOpcionesMenu5";
             this.ucOpcionesMenu5.Size = new System.Drawing.Size(258, 78);
             this.ucOpcionesMenu5.TabIndex = 11;
@@ -149,18 +155,12 @@
             this.ucReportes.Size = new System.Drawing.Size(301, 92);
             this.ucReportes.TabIndex = 8;
             // 
-            // notifyIcon
-            // 
-            this.notifyIcon.Text = "notifyIcon1";
-            this.notifyIcon.Visible = true;
-            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
-            // 
             // opReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(631, 485);
+            this.ClientSize = new System.Drawing.Size(631, 511);
             this.Controls.Add(this.ucOpcionesMenu5);
             this.Controls.Add(this.ucOpcionesMenu4);
             this.Controls.Add(this.ucOpcionesMenu3);

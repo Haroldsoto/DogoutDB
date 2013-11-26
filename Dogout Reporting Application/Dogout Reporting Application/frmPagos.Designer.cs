@@ -29,18 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.TicketInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CuboBusinessIntelligenceDataSet = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSet();
             this.txtIdTicket = new System.Windows.Forms.TextBox();
             this.lblIdTicket = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnPago = new System.Windows.Forms.Button();
-            this.CuboBusinessIntelligenceDataSet = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSet();
-            this.TicketInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TicketInfoTableAdapter = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSetTableAdapters.TicketInfoTableAdapter();
             this.btnBuscarTicket = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TicketInfoBindingSource
+            // 
+            this.TicketInfoBindingSource.DataMember = "TicketInfo";
+            this.TicketInfoBindingSource.DataSource = this.CuboBusinessIntelligenceDataSet;
+            // 
+            // CuboBusinessIntelligenceDataSet
+            // 
+            this.CuboBusinessIntelligenceDataSet.DataSetName = "CuboBusinessIntelligenceDataSet";
+            this.CuboBusinessIntelligenceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtIdTicket
             // 
@@ -60,34 +70,24 @@
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "dsTicketInfo";
-            reportDataSource3.Value = this.TicketInfoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "dsTicketInfo";
+            reportDataSource1.Value = this.TicketInfoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Dogout_Reporting_Application.Pagos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 51);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(312, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(312, 279);
             this.reportViewer1.TabIndex = 2;
             // 
             // btnPago
             // 
-            this.btnPago.Location = new System.Drawing.Point(233, 303);
+            this.btnPago.Location = new System.Drawing.Point(233, 336);
             this.btnPago.Name = "btnPago";
             this.btnPago.Size = new System.Drawing.Size(91, 37);
             this.btnPago.TabIndex = 3;
             this.btnPago.Text = "Generar Pago";
             this.btnPago.UseVisualStyleBackColor = true;
             this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
-            // 
-            // CuboBusinessIntelligenceDataSet
-            // 
-            this.CuboBusinessIntelligenceDataSet.DataSetName = "CuboBusinessIntelligenceDataSet";
-            this.CuboBusinessIntelligenceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TicketInfoBindingSource
-            // 
-            this.TicketInfoBindingSource.DataMember = "TicketInfo";
-            this.TicketInfoBindingSource.DataSource = this.CuboBusinessIntelligenceDataSet;
             // 
             // TicketInfoTableAdapter
             // 
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 348);
+            this.ClientSize = new System.Drawing.Size(337, 385);
             this.Controls.Add(this.btnBuscarTicket);
             this.Controls.Add(this.btnPago);
             this.Controls.Add(this.reportViewer1);
@@ -118,8 +118,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagos";
             this.Load += new System.EventHandler(this.frmPagos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuboBusinessIntelligenceDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

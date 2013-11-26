@@ -134,7 +134,9 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Ganador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ganador";
             this.Load += new System.EventHandler(this.Ganador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TicketInfoBindingSource)).EndInit();

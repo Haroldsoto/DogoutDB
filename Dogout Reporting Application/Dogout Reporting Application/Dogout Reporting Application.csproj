@@ -269,6 +269,7 @@
     <None Include="Resources\1385118673_qr-code.png" />
     <None Include="Resources\1385288252_invoice.png" />
     <None Include="Resources\1385413842_23.png" />
+    <None Include="Resources\1385500589_Trophy_Gold.png" />
     <Content Include="Resources\opControlBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

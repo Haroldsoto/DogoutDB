@@ -51,6 +51,16 @@ namespace Dogout_Reporting_Application
             frmTicket.ShowDialog();
         }
 
+        private void frmGenerarTicket_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
