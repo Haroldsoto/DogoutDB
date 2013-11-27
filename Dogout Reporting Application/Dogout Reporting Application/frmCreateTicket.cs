@@ -40,7 +40,11 @@ namespace Dogout_Reporting_Application
             cbJugadas.DataSource = Jugadas;
             cbEquipo.DataSource = Equipos;
         }
-
+        public static int rnd(int desde, int hasta)
+        {
+            Random rl = new Random();
+            return rl.Next(desde, (hasta + 1));
+        }
         private void lblMonto_Click(object sender, EventArgs e)
         {
 
@@ -58,7 +62,21 @@ namespace Dogout_Reporting_Application
             CuboBusinessIntelligenceDataSetTableAdapters.GetLastIdTableAdapter AdapterId = new GetLastIdTableAdapter();
             CuboBusinessIntelligenceDataSet.GetLastIdDataTable dt2 = AdapterId.GetData();
             int TeamId = 0;
-            int LineId= 1;
+            int LineId;
+            if(Match == "1")
+            {
+                 LineId = rnd(1, 11);
+            }
+            else if (Match == "7")
+            {
+                 LineId = rnd(11, 21);
+            }
+            else if (Match == "8")
+            {
+                 LineId = rnd(21, 31);
+            }
+            else
+                 LineId = 100;
             Jugada objeto = (Jugada)cbJugadas.SelectedItem;
             IdJugada = objeto.Id;
             if (cbEquipo.SelectedItem.ToString() == Home)
