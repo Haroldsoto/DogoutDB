@@ -32,13 +32,13 @@ namespace Dogout_Reporting_Application
 
              // Hook up the Elapsed event for the timer.
              aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-             aTimer.Interval = rnd(10000,60000);
+             aTimer.Interval = rnd(15000,30000);
              aTimer.Enabled = true;
              
              
         }
 
-private static int rnd(int desde, int hasta)
+public static int rnd(int desde, int hasta)
 {
              Random rl = new Random();
              return rl.Next(desde, (hasta + 1));
@@ -82,6 +82,7 @@ private static int rnd(int desde, int hasta)
 
        private void OnTimedEvent(object source, ElapsedEventArgs e)
        {
+           int line = rnd(1, 30);
 
            NotificationDesktop("test");
        }
