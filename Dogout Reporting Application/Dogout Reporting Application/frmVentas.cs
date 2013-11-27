@@ -14,7 +14,8 @@ namespace Dogout_Reporting_Application
     public partial class frmVentas : Form
     {
         public List<Payment> Payments;
-        public List<Ticket> Tickets; 
+        public List<Ticket> Tickets;
+        public DataGridViewRow selectedRow { get; set; }
         public frmVentas()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace Dogout_Reporting_Application
             CuboBusinessIntelligenceDataSet.GetPaymentsDataTable dt = adapter.GetData();
             CuboBusinessIntelligenceDataSetTableAdapters.GetTicketsAllTableAdapter adaptertickets =  new GetTicketsAllTableAdapter();
             CuboBusinessIntelligenceDataSet.GetTicketsAllDataTable dttickets = adaptertickets.GetData();
+            dgvTickets.DataSource = dttickets;
             foreach (var item in dttickets)
             {
                 Tickets.Add(new Ticket(item.Id, item.FechaTicket,item.DescripcionJugada, item.Monto.ToString(),item.TicketEstado,item.LineId, item.Name,item.ENFRENTAMIENTO));
@@ -46,7 +48,7 @@ namespace Dogout_Reporting_Application
                     TicketsAll.Add(new MyListBoxItem(Color.Blue, "Código de la Venta: " + item.Id.ToString() + "  Monto de la apuesta:  RD$" + item.Monto.ToString() + " Jugada: " + item.DescripcionJugada + "  Equipo Apostado: " + item.Name + "  Partido: " + item.ENFRENTAMIENTO));
                
             }
-            lbPayments.DataSource = TicketsAll;
+            //lbPayments.DataSource = TicketsAll;
         }
         public class MyListBoxItem
         {
@@ -61,7 +63,7 @@ namespace Dogout_Reporting_Application
 
         private void lbPayments_DrawItem(object sender, DrawItemEventArgs e)
         {
-            MyListBoxItem item = lbPayments.Items[e.Index] as MyListBoxItem; // Get the current item and cast it to MyListBoxItem
+            /*MyListBoxItem item = lbPayments.Items[e.Index] as MyListBoxItem; // Get the current item and cast it to MyListBoxItem
             if (item != null)
             {
                 e.Graphics.DrawString( // Draw the appropriate text in the ListBox
@@ -76,11 +78,19 @@ namespace Dogout_Reporting_Application
             {
                 // The item isn't a MyListBoxItem, do something about it
             }
+             * */
         }
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvTickets_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = dgvTickets.Rows[e.RowIndex];
+            frmTicketInfo frmTicketInfo = new frmTicketInfo(int.Parse(selectedRow.Cells["Id"].Value.ToString()));
+            frmTicketInfo.ShowDialog();
         }
 
 

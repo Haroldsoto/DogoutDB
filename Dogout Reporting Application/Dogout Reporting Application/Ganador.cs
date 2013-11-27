@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dogout_Reporting_Application.CuboBusinessIntelligenceDataSetTableAdapters;
 
 namespace Dogout_Reporting_Application
 {
     public partial class Ganador : Form
     {
         public decimal MontoGanador;
+        
         public Ganador()
         {
             InitializeComponent();
@@ -36,10 +38,16 @@ namespace Dogout_Reporting_Application
 
         private void btnSetWinner(object sender, EventArgs e)
         {
-            MontoGanador = 7500;
+            CuboBusinessIntelligenceDataSetTableAdapters.GetMontoGanadorTableAdapter adapterganador = new GetMontoGanadorTableAdapter();
+            CuboBusinessIntelligenceDataSet.GetMontoGanadorDataTable dtganador = adapterganador.GetData(int.Parse(textBox1.Text));
+            foreach (var item in dtganador)
+            {
+                MontoGanador = item.MontoGenerado;
+            }
+            
             CuboBusinessIntelligenceDataSetTableAdapters.SetWinnerTableAdapter adapter = new CuboBusinessIntelligenceDataSetTableAdapters.SetWinnerTableAdapter();
             CuboBusinessIntelligenceDataSet.SetWinnerDataTable dt = adapter.GetData(int.Parse(textBox1.Text),MontoGanador);
-            MessageBox.Show("Exitoso!");
+            MessageBox.Show("El ticket ha sido promovido a Ganador exitosamente.");
         }
     }
 }
