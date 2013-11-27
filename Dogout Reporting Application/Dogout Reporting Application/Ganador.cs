@@ -12,6 +12,7 @@ namespace Dogout_Reporting_Application
 {
     public partial class Ganador : Form
     {
+        public decimal MontoGanador;
         public Ganador()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace Dogout_Reporting_Application
         private void btnSetWinner(object sender, EventArgs e)
         {
             CuboBusinessIntelligenceDataSetTableAdapters.SetWinnerTableAdapter adapter = new CuboBusinessIntelligenceDataSetTableAdapters.SetWinnerTableAdapter();
-            CuboBusinessIntelligenceDataSet.SetWinnerDataTable dt = adapter.GetData(int.Parse(textBox1.Text),decimal.Parse(textBox2.Text));
+            CuboBusinessIntelligenceDataSet.SetWinnerDataTable dt = adapter.GetData(int.Parse(textBox1.Text),MontoGanador);
             MessageBox.Show("Exitoso!");
         }
     }

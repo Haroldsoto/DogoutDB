@@ -19,9 +19,13 @@ namespace Dogout_Reporting_Application
         public string Away;
         public string Match;
         public int IdJugada;
-        public frmCreateTicket(string matchid, string enfrentamiento)
+        public int One, Seven, Eight;
+        public frmCreateTicket(string matchid, string enfrentamiento,int one,int seven,int eight)
         {
             InitializeComponent();
+            One = one;
+            Seven = seven;
+            Eight = eight;
             Match = matchid;
             lblEnfrentamiento.Text = enfrentamiento;
             CuboBusinessIntelligenceDataSetTableAdapters.JugadasTableAdapter Adapter = new JugadasTableAdapter();
@@ -65,15 +69,15 @@ namespace Dogout_Reporting_Application
             int LineId;
             if(Match == "1")
             {
-                 LineId = rnd(1, 11);
+                LineId = Dogout_Reporting_Application.opReportes.one;
             }
             else if (Match == "7")
             {
-                 LineId = rnd(11, 21);
+                LineId = Dogout_Reporting_Application.opReportes.seven;
             }
             else if (Match == "8")
             {
-                 LineId = rnd(21, 31);
+                LineId = Dogout_Reporting_Application.opReportes.eight;
             }
             else
                  LineId = 100;

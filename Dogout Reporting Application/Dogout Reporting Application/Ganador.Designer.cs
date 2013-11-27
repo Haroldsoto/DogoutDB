@@ -36,8 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.TicketInfoTableAdapter = new Dogout_Reporting_Application.CuboBusinessIntelligenceDataSetTableAdapters.TicketInfoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.TicketInfoBindingSource)).BeginInit();
@@ -92,22 +90,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnBuscarTicket);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Monto";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(55, 294);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(161, 292);
@@ -128,8 +110,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 326);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label1);
@@ -152,8 +132,6 @@
         private System.Windows.Forms.Label label1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource TicketInfoBindingSource;
         private CuboBusinessIntelligenceDataSet CuboBusinessIntelligenceDataSet;

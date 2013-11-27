@@ -15,9 +15,13 @@ namespace Dogout_Reporting_Application
     {
         public string Fecha;
         public DataGridViewRow selectedRow { get; set; }
-        public frmGenerarTicket()
+        public int One, Seven, Eight;
+        public frmGenerarTicket(int one,int seven,int eight)
         {
             InitializeComponent();
+            One = one;
+            Seven = seven;
+            Eight = eight;
             dtpFechaMatch.Format = DateTimePickerFormat.Custom;
             dtpFechaMatch.CustomFormat = "MM/dd/yyyy";
             Fecha = DateTime.Now.ToString("MM/dd/yyyy");
@@ -47,7 +51,7 @@ namespace Dogout_Reporting_Application
             selectedRow = dgvMatches.Rows[e.RowIndex];
             //F;label2.Text = selectedRow.Cells["Código"].Value.ToString();
 
-            frmCreateTicket frmTicket = new frmCreateTicket(selectedRow.Cells["Código"].Value.ToString(), selectedRow.Cells["Enfrentamiento"].Value.ToString());
+            frmCreateTicket frmTicket = new frmCreateTicket(selectedRow.Cells["Código"].Value.ToString(), selectedRow.Cells["Enfrentamiento"].Value.ToString(),One,Seven,Eight);
             frmTicket.ShowDialog();
         }
 

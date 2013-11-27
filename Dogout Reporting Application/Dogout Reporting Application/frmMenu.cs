@@ -15,15 +15,21 @@ namespace Dogout_Reporting_Application
     public partial class opReportes : Form
     {
         public static System.Timers.Timer aTimer;
+        public static int one {get; set;}
+        public static int seven {get; set;}
+        public static int eight {get; set;}
         public opReportes()
         {
             InitializeComponent();
+            one = rnd(1, 10);
+            seven = rnd(11, 20);
+            eight = rnd(21, 30);
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
              ucOpcionesMenu2.formToOpen = new frmReportesApp();
-             ucOpcionesMenu1.formToOpen = new frmGenerarTicket();
+             ucOpcionesMenu1.formToOpen = new frmGenerarTicket(one,seven,eight);
              ucOpcionesMenu3.formToOpen = new frmPagos();
              ucOpcionesMenu4.formToOpen = new frmVentas();
              ucOpcionesMenu5.formToOpen = new Ganador();
@@ -82,9 +88,10 @@ public static int rnd(int desde, int hasta)
 
        private void OnTimedEvent(object source, ElapsedEventArgs e)
        {
-           int line = rnd(1, 30);
-
-           NotificationDesktop("test");
+           one = rnd(1, 10);
+           seven = rnd(11, 20);
+           eight = rnd(21, 30);
+           NotificationDesktop("Han cambiado las Lineas para los partidos: " + one.ToString());
        }
 
     }
