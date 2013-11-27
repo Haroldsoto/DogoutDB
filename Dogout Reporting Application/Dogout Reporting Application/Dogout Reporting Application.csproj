@@ -64,11 +64,23 @@
     <Compile Include="frmCreateTicket.Designer.cs">
       <DependentUpon>frmCreateTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLineasPorMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLineasPorMatch.Designer.cs">
+      <DependentUpon>frmLineasPorMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPagos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPagos.Designer.cs">
       <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteLineasPorMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteLineasPorMatch.Designer.cs">
+      <DependentUpon>frmReporteLineasPorMatch.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTicketImpreso.cs">
       <SubType>Form</SubType>
@@ -177,6 +189,9 @@
     <EmbeddedResource Include="frmGenerarTicket.resx">
       <DependentUpon>frmGenerarTicket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLineasPorMatch.resx">
+      <DependentUpon>frmLineasPorMatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteGananciasPorEquipo.resx">
       <DependentUpon>frmReporteGananciasPorEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteLineasPorMatch.resx">
+      <DependentUpon>frmReporteLineasPorMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteMatchesPorFecha.resx">
       <DependentUpon>frmReporteMatchesPorFecha.cs</DependentUpon>
@@ -229,6 +247,7 @@
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Ticket.rdlc" />
     <None Include="CuboBusinessIntelligenceDataSet.xsc">
       <DependentUpon>CuboBusinessIntelligenceDataSet.xsd</DependentUpon>

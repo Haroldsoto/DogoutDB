@@ -43,7 +43,8 @@ namespace Dogout_Reporting_Application
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            frmLineasPorMatch frmLineasPorMatch = new frmLineasPorMatch();
+            frmLineasPorMatch.ShowDialog();
         }
     }
 }

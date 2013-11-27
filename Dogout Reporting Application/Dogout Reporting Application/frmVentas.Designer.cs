@@ -97,7 +97,9 @@
             this.Controls.Add(this.lblVerde);
             this.Controls.Add(this.lblRojo);
             this.Controls.Add(this.lbPayments);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
             this.ResumeLayout(false);

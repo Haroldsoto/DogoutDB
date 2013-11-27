@@ -64,7 +64,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(218, 228);
+            this.button4.Location = new System.Drawing.Point(280, 231);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(62, 37);
             this.button4.TabIndex = 9;
@@ -77,15 +77,15 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 238);
+            this.label4.Location = new System.Drawing.Point(95, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 16);
+            this.label4.Size = new System.Drawing.Size(126, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Juagadas Populares por Fecha";
+            this.label4.Text = "Líneas por Partido";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(218, 172);
+            this.button3.Location = new System.Drawing.Point(280, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(62, 37);
             this.button3.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 182);
+            this.label3.Location = new System.Drawing.Point(95, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 16);
             this.label3.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(218, 117);
+            this.button2.Location = new System.Drawing.Point(280, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(62, 37);
             this.button2.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 127);
+            this.label2.Location = new System.Drawing.Point(95, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(181, 16);
             this.label2.TabIndex = 4;
@@ -127,7 +127,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(218, 64);
+            this.button1.Location = new System.Drawing.Point(280, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 37);
             this.button1.TabIndex = 3;
@@ -140,7 +140,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 74);
+            this.label1.Location = new System.Drawing.Point(95, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 16);
             this.label1.TabIndex = 2;
@@ -148,7 +148,7 @@
             // 
             // btnPartidosPorFecha
             // 
-            this.btnPartidosPorFecha.Location = new System.Drawing.Point(218, 10);
+            this.btnPartidosPorFecha.Location = new System.Drawing.Point(280, 13);
             this.btnPartidosPorFecha.Name = "btnPartidosPorFecha";
             this.btnPartidosPorFecha.Size = new System.Drawing.Size(62, 37);
             this.btnPartidosPorFecha.TabIndex = 1;
@@ -161,7 +161,7 @@
             this.lblReporteMatchesPorFecha.AutoSize = true;
             this.lblReporteMatchesPorFecha.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblReporteMatchesPorFecha.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReporteMatchesPorFecha.Location = new System.Drawing.Point(4, 20);
+            this.lblReporteMatchesPorFecha.Location = new System.Drawing.Point(95, 23);
             this.lblReporteMatchesPorFecha.Name = "lblReporteMatchesPorFecha";
             this.lblReporteMatchesPorFecha.Size = new System.Drawing.Size(132, 16);
             this.lblReporteMatchesPorFecha.TabIndex = 0;
