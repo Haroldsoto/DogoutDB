@@ -36,6 +36,7 @@ namespace Dogout_Reporting_Application
 
         private void btnSetWinner(object sender, EventArgs e)
         {
+            MontoGanador = 7500;
             CuboBusinessIntelligenceDataSetTableAdapters.SetWinnerTableAdapter adapter = new CuboBusinessIntelligenceDataSetTableAdapters.SetWinnerTableAdapter();
             CuboBusinessIntelligenceDataSet.SetWinnerDataTable dt = adapter.GetData(int.Parse(textBox1.Text),MontoGanador);
             MessageBox.Show("Exitoso!");

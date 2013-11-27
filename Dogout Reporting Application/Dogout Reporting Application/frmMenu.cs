@@ -91,7 +91,7 @@ public static int rnd(int desde, int hasta)
            one = rnd(1, 10);
            seven = rnd(11, 20);
            eight = rnd(21, 30);
-           NotificationDesktop("Han cambiado las Lineas para los partidos: " + one.ToString());
+           NotificationDesktop("Han cambiado las Lineas para: Partido 1: " + one.ToString() + " - Partido 7: " + seven.ToString() + " - Partido 8: "+ eight.ToString());
        }
 
     }
